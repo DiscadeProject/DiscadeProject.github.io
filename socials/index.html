@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <link rel="stylesheet" href="default.css">
+  <link rel="icon" href="media/DiscadeLogo.png">
+  <meta content="Discade Project" property="og:title" />
+  <meta content="https://discade.dev/media/DiscadeLogo.png" property="og:image">
+  <meta content="256" property="og:image:height">
+  <meta content="256" property="og:image:width">
+  <title>Team Socials</title>
+</head>
+
+<body class="b">
+  <div style="font-size:250%;" id="title">
+    <h>all socials</h>
+  </div> <br>
+  <a href="/" style="font-size:75%;color:rgb(255, 255, 255)" onmouseover="titlec('Discade Project')">ready to
+    return?</a><br><br>
+  <div class="socials">
+    <div class="links">
+      <div><a href="https://discord.com/users/424748431399976961" style="color:rgb(150, 15, 255);"
+          onmouseover="titlec('chitchat')">LynnV7</a></div>
+      <div><a href="https://introvert.country/@Neeko" style="color:#ff8fbf;" onmouseover="titlec('videos')">Neeko</a>
+      </div>
+      <div><a rel="me" href="https://twitter.com/_neetgf" style="color:rgb(174, 93, 194);"
+          onmouseover="titlec('microblogging')">ivy</a></div>
+    </div> <br>
+</body>
+
+
+
+<!--idk how to properly use a JS file lmao----->
+<script>
+  let the;
+  function titlec(string = "") {
+    document.getElementById("title").innerHTML = string
+    clearTimeout(the)
+    the = setTimeout(what, 1000)
+
+  }
+  function what() {
+    document.getElementById("title").innerHTML = "all socials";
+  }
+</script>
+
+</html>
