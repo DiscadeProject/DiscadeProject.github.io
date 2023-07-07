@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
   <title>Discade Project</title>
   <base href="·">
@@ -11,43 +12,55 @@
   <meta content="256" property="og:image:height">
   <meta content="256" property="og:image:width">
 </head>
-<div style="font-size:250%; font-weight: bolder;" id="title">
-  <h>Discade Project </h>
-</div>
+
 
 <body class="b">
-  <br><br>
-  <a href="./socials" style="color: white;" onmouseover="titlec('Team Socials')">-===...===-</a><br>
-  <div class="socials">
-    <div class="links"> <!--
-      <div>
-        <a href="" style="color:rgb(208, 228, 255)">tobokeen</a>
-      </div>  implement this when tobokeen rewrite is done-->
-      <div>
-        <a href="https://github.com/DiscadeProject/" style="color:white;" onmouseover="titlec('programming')">github</a>
+  <img src="./media/arrow.gif" alt="selectionarrow" id="arrow" class="cursor">
+
+  <div style="font-size:250%; font-weight: bolder;" id="title">
+
+    <h>Discade Project </h>
+  </div>
+  <div class="container">
+    <img src="./media/testimage.png" alt="testimage" width="720" height="auto" object-fit="" />
+    <div class="text">
+      <div class="text-row">
+        <h1><a class="mainpagelink" href="https://store.steampowered.com/publisher/DiscadeProject">games</a></h1>
+      </div>
+      <div class="text-row">
+        <h1><a class="mainpagelink" href="https://www.discord.com">discord</a></h1>
+      </div>
+      <div class="text-row">
+        <h1><a class="mainpagelink" href="https://github.com/DiscadeProject">github</a></h1>
+      </div>
+      <div class="text-row">
+        <h1> <a class="mainpagelink" href="./socials/">team</a></h1>
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  <br><a href="https://github.com/DiscadeProject/DiscadeProject.github.io"
-    style="color:rgb(114, 106, 117);font-size:50%;" onmouseover="titlec('the source')">site code</a>
-  </div>
-  <img src="./media/DiscadeLogo.png" alt="discade logo" style="position:absolute;bottom:0;right:0;size: 100px;"
-    width="100" height="100">
   <script>
-    let the;
-    function titlec(string = "") {
-      document.getElementById("title").innerHTML = string
-      clearTimeout(the)
-      the = setTimeout(what, 2000)
+    document.documentElement.style.cursor = 'none' //put this in script because im gonna be so real i didn't know where
+    //to put in the CSS, i don't do webdev i hate this stuff dude- look at how ugly this code is? you think a genius did this?
+    // no! of course not!
+    var image = document.getElementsByClassName("cursor");
+    var sy = 1;
+    document.onmousemove = function () {
+      var x = -3 + event.clientX * 100 / window.innerWidth + "%";
+      var y = -1 + event.clientY * 100 / window.innerHeight + "%";
+      try { //what do you mean the code is bad? just try-catch all the errors you find :)))))
+        for (var i = 0; i < 2; i++) {
+          image[i].style.left = x;
+          image[i].style.top = y;
+          image[i].style.transform = "translate(-" + x + ",-" + y + ") scaleY(" + sy + ")";
+        }
 
-    }
-    function what() {
-      document.getElementById("title").innerHTML = "Discade Project";
+      } catch (TypeError) {
+
+
+      }
+
     }
   </script>
 </body>
 
-</html><br>
-<!--hope you like that Z----->
+</html>

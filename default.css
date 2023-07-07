@@ -14,51 +14,55 @@ body {
 
 }
 
+.mainpagelink {
+  color: #ff8fbf;
+}
+
+.mainpagelink:hover {
+  color: cyan
+}
+
+.cursor {
+  position: absolute;
+  top: 50%;
+  left: 50;
+  z-index: -8888;
+
+}
+
 /*lol i moved all of b to body lolllll lmaooooo*/
 .b {
   font-family: h, monospace;
   text-align: center;
 }
 
-.row {
+.container {
+  height: auto;
+  width: auto;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  box-sizing: content-box;
-  flex-shrink: 1;
 }
 
-.reverse {
-  flex-direction: row-reverse;
+.image {
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
-.column {
+.text {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
-  text-align: center;
-  flex: 50%;
-  flex-shrink: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-button {
-  font-size: 100%;
-
-  border-radius: 0px;
-  background-color: black;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  font-family: h, monospace;
-  -moz-user-select: text;
-  -khtml-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+.text-row {
+  margin-bottom: 10px;
 }
 
 a {
   text-decoration: none;
+  cursor: none;
 }
 
 .socials {
@@ -100,15 +104,4 @@ a {
 
 .socials>.links>div {
   flex-basis: 10%;
-}
-
-@media (orientation:portrait) {
-  .b {
-    font-size: 200%;
-    padding-bottom: 10%;
-  }
-
-  .links>div {
-    padding: 0.75em 0.55em;
-  }
 }
