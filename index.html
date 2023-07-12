@@ -38,29 +38,6 @@
       </div>
     </div>
   </div>
-  <script>
-    document.documentElement.style.cursor = 'none' //put this in script because im gonna be so real i didn't know where
-    //to put in the CSS, i don't do webdev i hate this stuff dude- look at how ugly this code is? you think a genius did this?
-    // no! of course not!
-    var image = document.getElementsByClassName("cursor");
-    var sy = 1;
-    document.onmousemove = function () {
-      var x = -3 + event.clientX * 100 / window.innerWidth + "%";
-      var y = -1 + event.clientY * 100 / window.innerHeight + "%";
-      try { //what do you mean the code is bad? just try-catch all the errors you find :)))))
-        for (var i = 0; i < 2; i++) {
-          image[i].style.left = x;
-          image[i].style.top = y;
-          image[i].style.transform = "translate(-" + x + ",-" + y + ") scaleY(" + sy + ")";
-        }
-
-      } catch (TypeError) {
-
-
-      }
-
-    }
-  </script>
 </body>
 
 </html>
